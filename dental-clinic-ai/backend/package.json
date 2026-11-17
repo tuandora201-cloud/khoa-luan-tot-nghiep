@@ -1,0 +1,18 @@
+{
+  "name": "dental-backend",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "node --test",
+    "seed": "node seed.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "sequelize": "^6.37.5",
+    "mysql2": "^3.12.0",
+    "dotenv": "^16.4.7",
+    "cors": "^2.8.5",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

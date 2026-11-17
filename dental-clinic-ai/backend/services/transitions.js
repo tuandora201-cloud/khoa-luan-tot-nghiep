@@ -1,0 +1,2 @@
+const transitions={PENDING:['CONFIRMED','CANCELLED'],CONFIRMED:['CHECKED_IN','CANCELLED','NO_SHOW'],CHECKED_IN:['IN_PROGRESS'],IN_PROGRESS:['COMPLETED'],COMPLETED:[],CANCELLED:[],NO_SHOW:[]};
+function canTransition(role,from,to){return Boolean(transitions[from]?.includes(to)&&((role==='PATIENT'&&to==='CANCELLED')||(role==='DOCTOR'&&['IN_PROGRESS','COMPLETED'].includes(to))||(['ADMIN','RECEPTIONIST'].includes(role)&&!['IN_PROGRESS','COMPLETED'].includes(to))))}module.exports={canTransition};
